@@ -1,16 +1,7 @@
 import React from "react";
 import "./Home.css";
 import Product from "./product/Product";
-
-export async function getServerSideProps(context) {
-  const products = await fetch("https://fakestoreapi.com/products").then(
-    (res) => res.json()
-  );
-
-  console.log(products);
-}
-
-getServerSideProps();
+import { Products } from "../../dummyData";
 
 function Home() {
   return (
@@ -22,17 +13,20 @@ function Home() {
           className="home__image"
         />
 
-        {/* <div className="home__row">
-          {products.map(product => (
-            <Product
-            id={product.id}
-            title={product.title}
-            price={product.prise}
-            image="https://images-na.ssl-images-amazon.com/images/I/71xIJSCVtZL._UX679_.jpg"
-            rating={4}
-          />
+        <div className="home__row">
+          {Products.map((product) => (
+            <div className="home__rowProduct">
+              <Product
+                id={product.id}
+                title={product.title}
+                price={product.price}
+                image={product.image}
+                description={product.description}
+                rating={product.rating}
+              />
+            </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </div>
   );

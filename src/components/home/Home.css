@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  max-width: 1500px;
+  width: 100%;
 }
 
 .home__image {
@@ -13,7 +13,14 @@
 }
 
 .home__row {
-  display: flex;
   z-index: 1;
-  margin: 0 5px;
+  margin: 20px 0;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.home__rowProduct {
+  width: 25%;
+  height: 450px;
 }

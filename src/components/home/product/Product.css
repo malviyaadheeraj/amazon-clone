@@ -5,18 +5,18 @@
   justify-content: center;
   margin: 10px;
   padding: 20px;
-  width: 100%;
-  max-height: 400px;
-  min-width: 100px;
+  width: 280px;
+  height: 400px;
   background-color: white;
   z-index: 1;
 }
 
-.product img {
-  max-height: 200px;
+.product__image {
+  height: 180px;
   width: 100%;
   object-fit: contain;
   margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .product button {
@@ -38,10 +38,6 @@
 
 .product__rating {
   display: flex;
-}
-
-.product__rating p {
-  font-size: 35px;
+  font-size: 30px;
   color: orange;
-  margin: 3px;
 }
